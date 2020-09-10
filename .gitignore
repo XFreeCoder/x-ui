@@ -1,0 +1,8 @@
+.DS_Store
+coverage
+yarn-error.log
+node_modules
+*.swp
+build
+dist
+.idea/
