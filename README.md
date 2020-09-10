@@ -26,4 +26,4 @@ const Example: FC = () => {
 
 ## License
 
-MIT © [LeetCoder](https://github.com/MrHeer)
+MIT © [XFreeCoder](https://github.com/XFreeCoder)
