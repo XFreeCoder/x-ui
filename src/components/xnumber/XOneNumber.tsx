@@ -25,30 +25,6 @@ const StyledAnimated = styled(animated.div)`
   will-change: transform, opacity;
 `
 
-const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
-  if (direction === 'up') {
-    return ((from + 1) % 10) as OneNumType
-  }
-  if (from === 0) {
-    return 9
-  }
-  return (from - 1) as OneNumType
-}
-
-const getRange = (
-  from: OneNumType,
-  to: OneNumType,
-  direction: DirectionType
-) => {
-  const range: OneNumType[] = []
-  let cur = from
-  do {
-    cur = getNext(cur, direction)
-    range.push(cur)
-  } while (cur !== to)
-  return range
-}
-
 const XInnerOneNumber: FC<IProps> = (props) => {
   const { value = 0, direction = 'up', offsetFrom = 10, offsetTo = -5 } = props
   const offset = useMemo(() => {
@@ -57,7 +33,6 @@ const XInnerOneNumber: FC<IProps> = (props) => {
     }
     return { offsetFrom: -offsetFrom, offsetTo: -offsetTo }
   }, [direction, offsetTo, offsetFrom])
-  console.log(value)
   const transitions = useTransition(value, (p) => p, {
     from: {
       opacity: 0,
@@ -79,15 +54,41 @@ const XInnerOneNumber: FC<IProps> = (props) => {
 
 const XInnerOneNumberAnimated = animated(XInnerOneNumber)
 
+const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
+  if (direction === 'up') {
+    return ((from + 1) % 10) as OneNumType
+  }
+  if (from === 0) {
+    return 9
+  }
+  return (from - 1) as OneNumType
+}
+
+const getRange = (
+  from: OneNumType,
+  to: OneNumType,
+  direction: DirectionType
+) => {
+  if (from === to) {
+    return [to]
+  }
+  const range: OneNumType[] = []
+  let cur = from
+  do {
+    cur = getNext(cur, direction)
+    range.push(cur)
+  } while (cur !== to)
+  return range
+}
+
 const XOneNumber: FC<IProps> = (props) => {
   const { value = 0, direction = 'up', ...restProps } = props
-  const preValue = usePrevious(value)
-  const values = useMemo(() => {
-    if (preValue !== undefined && preValue !== value) {
-      return getRange(preValue, value, direction)
-    }
-    return [value]
-  }, [value, preValue, direction])
+  const preValue = usePrevious(value) || 0
+  const values = useMemo(() => getRange(preValue, value, direction), [
+    value,
+    preValue,
+    direction
+  ])
   const { index } = useSpring({
     index: values.length - 1,
     from: { index: 0 },

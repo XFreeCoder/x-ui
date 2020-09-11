@@ -17,13 +17,11 @@ const Container = styled.div`
 
 const XNumber: FC<IProps> = (props) => {
   const { value = 0 } = props
-  const preValue = usePrevious(value)
-  const direction = useMemo(() => {
-    if (preValue) {
-      return value - preValue > 0 ? 'up' : 'down'
-    }
-    return 'up'
-  }, [value, preValue])
+  const preValue = usePrevious(value) || 0
+  const direction = useMemo(() => (value - preValue >= 0 ? 'up' : 'down'), [
+    value,
+    preValue
+  ])
   const values = value
     .toString()
     .split('')

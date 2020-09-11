@@ -13,5 +13,5 @@ const Template: Story<XNumberProps> = (args) => <XNumber {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  value: 5
+  value: 520
 }
