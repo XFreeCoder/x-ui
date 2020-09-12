@@ -4,12 +4,9 @@ import { usePreviousDistinct } from 'react-use'
 import { isNumber } from 'lodash'
 import XOneChar from './XOneChar'
 import { XNumberContainer } from './Styled'
+import { IXNumberProps } from './interface'
 
-export interface IProps {
-  value?: number
-}
-
-const XNumber: FC<IProps> = (props) => {
+const XNumber: FC<IXNumberProps> = (props) => {
   const { value = 0 } = props
   const preValue = usePreviousDistinct(value) || 0
   const direction = useMemo(() => (value - preValue >= 0 ? 'up' : 'down'), [
