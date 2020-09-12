@@ -16,8 +16,9 @@ export interface IXOneCharProps extends Omit<IXOneNumberProps, 'value'> {
 export interface IXNumberProps {
   /**
    * display number
+   * @type number | string
    *
    * @default 0
    */
-  value?: number
+  value?: number | string
 }

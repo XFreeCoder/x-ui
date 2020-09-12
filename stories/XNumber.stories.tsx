@@ -19,9 +19,9 @@ Default.args = {
 }
 
 export const Random: FC = () => {
-  const [value, setValue] = useState(random(0, 1000000))
+  const [value, setValue] = useState(random(-10000, 10000, true).toFixed(2))
   useInterval(() => {
-    setValue(random(0, 1000000))
-  }, 1000)
+    setValue(random(-10000, 10000, true).toFixed(2))
+  }, 2000)
   return <XNumber value={value} />
 }
