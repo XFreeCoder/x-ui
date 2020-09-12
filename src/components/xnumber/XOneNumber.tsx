@@ -5,7 +5,7 @@ import { isEqual } from 'lodash'
 import { OneNumType, DirectionType, IXOneNumberProps } from './interface'
 import XOneChar from './XOneChar'
 
-const XOneCharAnimated = animated(XOneChar)
+const AnimatedXOneChar = animated(XOneChar)
 
 const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
   if (direction === 'up') {
@@ -48,8 +48,8 @@ const XOneNumber: FC<IXOneNumberProps> = (props) => {
     reset: true
   })
   return (
-    <XOneCharAnimated
-      value={index.interpolate((i) => values[Math.round(i)])}
+    <AnimatedXOneChar
+      value={index.interpolate((i) => values[Math.floor(i)])}
       direction={direction}
       {...restProps}
     />
