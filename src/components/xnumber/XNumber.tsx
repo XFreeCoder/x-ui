@@ -21,7 +21,7 @@ const XNumber: FC<IProps> = (props) => {
     .split('')
     .reverse()
     .map((v, index) => {
-      const type = isNumber(v) ? 'number' : 'char'
+      const type = isNumber(Number(v)) ? 'number' : 'char'
       return { value: v, index, type }
     })
     .reverse()

@@ -49,7 +49,7 @@ const XOneNumber: FC<IXOneNumberProps> = (props) => {
   })
   return (
     <AnimatedXOneChar
-      value={index.interpolate((i) => values[Math.floor(i)])}
+      value={index.interpolate((i) => values[Math.round(i)])}
       direction={direction}
       {...restProps}
     />
