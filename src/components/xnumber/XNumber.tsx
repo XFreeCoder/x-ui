@@ -3,7 +3,7 @@ import XOneNumber from './XOneNumber'
 import { usePreviousDistinct } from 'react-use'
 import { isNumber } from 'lodash'
 import XOneChar from './XOneChar'
-import { XOneContainer } from './Styled'
+import { XNumberContainer } from './Styled'
 
 export interface IProps {
   value?: number
@@ -26,7 +26,7 @@ const XNumber: FC<IProps> = (props) => {
     })
     .reverse()
   return (
-    <XOneContainer>
+    <XNumberContainer>
       {values.map((v) =>
         v.type === 'number' ? (
           <XOneNumber
@@ -42,7 +42,7 @@ const XNumber: FC<IProps> = (props) => {
           />
         )
       )}
-    </XOneContainer>
+    </XNumberContainer>
   )
 }
 

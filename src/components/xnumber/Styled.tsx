@@ -13,7 +13,7 @@ export const StyledXOneChar = styled(animated.div)`
   will-change: transform, opacity;
 `
 
-export const XOneContainer = styled.div`
+export const XNumberContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
