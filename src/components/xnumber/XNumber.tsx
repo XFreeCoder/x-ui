@@ -1,7 +1,7 @@
 import React, { FC, useMemo } from 'react'
 import XOneNumber from './XOneNumber'
 import styled from 'styled-components'
-import { usePrevious } from 'react-use'
+import { usePreviousDistinct } from 'react-use'
 
 export interface IProps {
   value?: number
@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const XNumber: FC<IProps> = (props) => {
   const { value = 0 } = props
-  const preValue = usePrevious(value) || 0
+  const preValue = usePreviousDistinct(value) || 0
   const direction = useMemo(() => (value - preValue >= 0 ? 'up' : 'down'), [
     value,
     preValue

@@ -1,7 +1,8 @@
 import React, { FC, useMemo } from 'react'
 import { useTransition, animated, useSpring } from 'react-spring'
 import styled from 'styled-components'
-import { usePrevious } from 'react-use'
+import { usePreviousDistinct } from 'react-use'
+import { isEqual } from 'lodash'
 
 type OneNumType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 type DirectionType = 'up' | 'down'
@@ -52,7 +53,7 @@ const XInnerOneNumber: FC<IProps> = (props) => {
   )
 }
 
-const XInnerOneNumberAnimated = animated(XInnerOneNumber)
+const XInnerOneNumberAnimated = animated(React.memo(XInnerOneNumber))
 
 const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
   if (direction === 'up') {
@@ -83,7 +84,7 @@ const getRange = (
 
 const XOneNumber: FC<IProps> = (props) => {
   const { value = 0, direction = 'up', ...restProps } = props
-  const preValue = usePrevious(value) || 0
+  const preValue = usePreviousDistinct(value) || 0
   const values = useMemo(() => getRange(preValue, value, direction), [
     value,
     preValue,
@@ -103,4 +104,9 @@ const XOneNumber: FC<IProps> = (props) => {
   )
 }
 
-export default XOneNumber
+export default React.memo(XOneNumber, (preProps, nextProps) => {
+  const { direction: preDirection, ...restPreProps } = preProps
+  const { direction: nextDirection, ...restNextProps } = nextProps
+  // only direction change, dot re-render
+  return isEqual(restPreProps, restNextProps)
+})
