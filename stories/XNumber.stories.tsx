@@ -13,15 +13,15 @@ export default {
 
 const Template: Story<XNumberProps> = (args) => <XNumber {...args} />
 
-export const Default = Template.bind({})
+export const Default: Meta = Template.bind({})
 Default.args = {
   value: 520
 }
 
 export const Random: FC = () => {
-  const [number, setNumber] = useState(random(-10000, 10000))
+  const [value, setValue] = useState(random(0, 1000000))
   useInterval(() => {
-    setNumber(random(-10000, 10000))
-  }, 5000)
-  return <XNumber value={number} />
+    setValue(random(0, 1000000))
+  }, 1000)
+  return <XNumber value={value} />
 }
