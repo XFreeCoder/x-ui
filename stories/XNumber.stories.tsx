@@ -9,13 +9,19 @@ type XNumberProps = React.ComponentProps<typeof XNumber>
 export default {
   title: 'Number/XNumber',
   component: XNumber
-} as Meta
+} as Meta<XNumberProps>
 
 const Template: Story<XNumberProps> = (args) => <XNumber {...args} />
 
-export const Default: Meta = Template.bind({})
+export const Default: Meta<XNumberProps> = Template.bind({})
 Default.args = {
   value: 520
+}
+Default.argTypes = {
+  value: { control: { type: 'number', step: 0.01 } },
+  color: { control: { type: 'color' } },
+  backgroundColor: { control: { type: 'color' } },
+  style: { control: { type: 'object' } }
 }
 
 export const Random: FC = () => {

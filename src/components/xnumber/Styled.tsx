@@ -1,22 +1,25 @@
 import { animated } from 'react-spring'
 import styled from 'styled-components'
+import { IXNumberProps } from './interface'
 
-export const XOneCharContainer = styled.div`
-  width: 10px;
-  height: 20px;
-`
+type StyleProps = Omit<IXNumberProps, 'value' | 'style'>
 
-export const StyledXOneChar = styled(animated.div)`
-  position: absolute;
-  height: 20px;
-  font-size: 16px;
-  will-change: transform, opacity;
-`
+export const XOneCharContainer = styled.div((_props) => ({
+  overflowY: 'hidden'
+}))
 
-export const XNumberContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: end;
-  align-items: center;
-`
+export const StyledXOneChar = styled(animated.div)((_props) => ({
+  position: 'absolute',
+  willChange: 'transform, opacity'
+}))
+
+export const XNumberContainer = styled.div<StyleProps>((props) => ({
+  display: 'flex',
+  justifyContent: 'end',
+  alignItems: 'center',
+  color: props.color,
+  backgroundColor: props.backgroundColor,
+  fontSize: props.fontSize,
+  fontWeight: props.fontWeight,
+  padding: 5
+}))
