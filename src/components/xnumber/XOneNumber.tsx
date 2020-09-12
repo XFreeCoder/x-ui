@@ -2,37 +2,11 @@ import React, { FC, useMemo } from 'react'
 import { animated, useSpring } from 'react-spring'
 import { usePreviousDistinct } from 'react-use'
 import { isEqual } from 'lodash'
-import { OneNumType, DirectionType, IXOneNumberProps } from './interface'
+import { IXOneNumberProps } from './interface'
 import XOneChar from './XOneChar'
+import { getRange } from './utils'
 
 const AnimatedXOneChar = animated(XOneChar)
-
-const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
-  if (direction === 'up') {
-    return ((from + 1) % 10) as OneNumType
-  }
-  if (from === 0) {
-    return 9
-  }
-  return (from - 1) as OneNumType
-}
-
-const getRange = (
-  from: OneNumType,
-  to: OneNumType,
-  direction: DirectionType
-) => {
-  if (from === to) {
-    return [to]
-  }
-  const range: OneNumType[] = []
-  let cur = from
-  do {
-    cur = getNext(cur, direction)
-    range.push(cur)
-  } while (cur !== to)
-  return range
-}
 
 const XOneNumber: FC<IXOneNumberProps> = (props) => {
   const { value = 0, direction = 'up', ...restProps } = props

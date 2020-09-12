@@ -30,4 +30,4 @@ const XOneChar: FC<IXOneCharProps> = (props) => {
   )
 }
 
-export default React.memo(XOneChar)
+export default XOneChar

@@ -12,3 +12,7 @@ export interface IXOneNumberProps {
 export interface IXOneCharProps extends Omit<IXOneNumberProps, 'value'> {
   value: OneNumType | NumSymbolType
 }
+
+export interface IXNumberProps {
+  value?: number
+}
