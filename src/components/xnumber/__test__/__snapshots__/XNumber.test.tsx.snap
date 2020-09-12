@@ -6,33 +6,36 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-dlnjPT dNiMwY"
+        class="sc-dlnjPT hcfENY"
       >
         <div
-          class="sc-bdnylx gygMxE"
+          class="sc-bdnylx ffZFiP"
+          style="height: 0px; width: 0px;"
         >
           <div
-            class="sc-gtssRu iPqpwA x-one-number"
+            class="sc-gtssRu huSdcX x-one-number"
             style="opacity: 0; transform: translate3d(0,10px,0);"
           >
             1
           </div>
         </div>
         <div
-          class="sc-bdnylx gygMxE"
+          class="sc-bdnylx ffZFiP"
+          style="height: 0px; width: 0px;"
         >
           <div
-            class="sc-gtssRu iPqpwA x-one-number"
+            class="sc-gtssRu huSdcX x-one-number"
             style="opacity: 0; transform: translate3d(0,10px,0);"
           >
             1
           </div>
         </div>
         <div
-          class="sc-bdnylx gygMxE"
+          class="sc-bdnylx ffZFiP"
+          style="height: 0px; width: 0px;"
         >
           <div
-            class="sc-gtssRu iPqpwA x-one-number"
+            class="sc-gtssRu huSdcX x-one-number"
             style="opacity: 0; transform: translate3d(0,10px,0);"
           >
             0
@@ -43,33 +46,36 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-dlnjPT dNiMwY"
+      class="sc-dlnjPT hcfENY"
     >
       <div
-        class="sc-bdnylx gygMxE"
+        class="sc-bdnylx ffZFiP"
+        style="height: 0px; width: 0px;"
       >
         <div
-          class="sc-gtssRu iPqpwA x-one-number"
+          class="sc-gtssRu huSdcX x-one-number"
           style="opacity: 0; transform: translate3d(0,10px,0);"
         >
           1
         </div>
       </div>
       <div
-        class="sc-bdnylx gygMxE"
+        class="sc-bdnylx ffZFiP"
+        style="height: 0px; width: 0px;"
       >
         <div
-          class="sc-gtssRu iPqpwA x-one-number"
+          class="sc-gtssRu huSdcX x-one-number"
           style="opacity: 0; transform: translate3d(0,10px,0);"
         >
           1
         </div>
       </div>
       <div
-        class="sc-bdnylx gygMxE"
+        class="sc-bdnylx ffZFiP"
+        style="height: 0px; width: 0px;"
       >
         <div
-          class="sc-gtssRu iPqpwA x-one-number"
+          class="sc-gtssRu huSdcX x-one-number"
           style="opacity: 0; transform: translate3d(0,10px,0);"
         >
           0
