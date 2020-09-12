@@ -1,21 +1,13 @@
 import React, { FC, useMemo } from 'react'
 import XOneNumber from './XOneNumber'
-import styled from 'styled-components'
 import { usePreviousDistinct } from 'react-use'
 import { isNumber } from 'lodash'
 import XOneChar from './XOneChar'
+import { XOneContainer } from './Styled'
 
 export interface IProps {
   value?: number
 }
-
-const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: end;
-  align-items: center;
-`
 
 const XNumber: FC<IProps> = (props) => {
   const { value = 0 } = props
@@ -34,7 +26,7 @@ const XNumber: FC<IProps> = (props) => {
     })
     .reverse()
   return (
-    <Container>
+    <XOneContainer>
       {values.map((v) =>
         v.type === 'number' ? (
           <XOneNumber
@@ -50,7 +42,7 @@ const XNumber: FC<IProps> = (props) => {
           />
         )
       )}
-    </Container>
+    </XOneContainer>
   )
 }
 

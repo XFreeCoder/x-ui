@@ -1,7 +1,7 @@
 import React, { FC, useMemo } from 'react'
 import { useTransition } from 'react-spring'
 import { IXOneCharProps } from './interface'
-import { OneCharContainer, StyledOneChar } from './Styled'
+import { XOneCharContainer, StyledXOneChar } from './Styled'
 
 const XOneChar: FC<IXOneCharProps> = (props) => {
   const { value, direction = 'up', offsetFrom = 10, offsetTo = -5 } = props
@@ -20,13 +20,13 @@ const XOneChar: FC<IXOneCharProps> = (props) => {
     leave: { opacity: 0, transform: `translate3d(0,${offset.offsetTo}px,0)` }
   })
   return (
-    <OneCharContainer>
+    <XOneCharContainer>
       {transitions.map(({ item, props, key }) => (
-        <StyledOneChar key={key} className='x-one-number' style={props}>
+        <StyledXOneChar key={key} className='x-one-number' style={props}>
           {item}
-        </StyledOneChar>
+        </StyledXOneChar>
       ))}
-    </OneCharContainer>
+    </XOneCharContainer>
   )
 }
 
