@@ -1,10 +1,12 @@
 import React, { FC, useMemo } from 'react'
 import { useTransition } from 'react-spring'
+import { useMeasure } from 'react-use'
 import { IXOneCharProps } from './interface'
 import { XOneCharContainer, StyledXOneChar } from './Styled'
 
 const XOneChar: FC<IXOneCharProps> = (props) => {
   const { value, direction = 'up', offsetFrom = 10, offsetTo = -5 } = props
+  const [measureRef, { height, width }] = useMeasure<HTMLDivElement>()
   const offset = useMemo(() => {
     if (direction === 'up') {
       return { offsetFrom, offsetTo }
@@ -20,9 +22,14 @@ const XOneChar: FC<IXOneCharProps> = (props) => {
     leave: { opacity: 0, transform: `translate3d(0,${offset.offsetTo}px,0)` }
   })
   return (
-    <XOneCharContainer>
+    <XOneCharContainer style={{ height, width }}>
       {transitions.map(({ item, props, key }) => (
-        <StyledXOneChar key={key} className='x-one-number' style={props}>
+        <StyledXOneChar
+          ref={measureRef}
+          key={key}
+          className='x-one-number'
+          style={props}
+        >
           {item}
         </StyledXOneChar>
       ))}
