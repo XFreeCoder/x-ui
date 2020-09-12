@@ -1,59 +1,11 @@
 import React, { FC, useMemo } from 'react'
-import { useTransition, animated, useSpring } from 'react-spring'
-import styled from 'styled-components'
+import { animated, useSpring } from 'react-spring'
 import { usePreviousDistinct } from 'react-use'
 import { isEqual } from 'lodash'
+import { OneNumType, DirectionType, IXOneNumberProps } from './interface'
+import XOneChar from './XOneChar'
 
-type OneNumType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-type DirectionType = 'up' | 'down'
-
-interface IProps {
-  value?: OneNumType
-  direction?: DirectionType
-  offsetFrom?: number
-  offsetTo?: number
-}
-
-const Container = styled.div`
-  width: 10px;
-  height: 20px;
-`
-
-const StyledAnimated = styled(animated.div)`
-  position: absolute;
-  height: 20px;
-  font-size: 16px;
-  will-change: transform, opacity;
-`
-
-const XInnerOneNumber: FC<IProps> = (props) => {
-  const { value = 0, direction = 'up', offsetFrom = 10, offsetTo = -5 } = props
-  const offset = useMemo(() => {
-    if (direction === 'up') {
-      return { offsetFrom, offsetTo }
-    }
-    return { offsetFrom: -offsetFrom, offsetTo: -offsetTo }
-  }, [direction, offsetTo, offsetFrom])
-  const transitions = useTransition(value, (p) => p, {
-    from: {
-      opacity: 0,
-      transform: `translate3d(0,${offset.offsetFrom}px,0)`
-    },
-    enter: { opacity: 1, transform: `translate3d(0,0,0)` },
-    leave: { opacity: 0, transform: `translate3d(0,${offset.offsetTo}px,0)` }
-  })
-  return (
-    <Container>
-      {transitions.map(({ item, props, key }) => (
-        <StyledAnimated key={key} className='x-one-number' style={props}>
-          {item}
-        </StyledAnimated>
-      ))}
-    </Container>
-  )
-}
-
-const XInnerOneNumberAnimated = animated(React.memo(XInnerOneNumber))
+const XOneCharAnimated = animated(XOneChar)
 
 const getNext = (from: OneNumType, direction: DirectionType): OneNumType => {
   if (direction === 'up') {
@@ -82,7 +34,7 @@ const getRange = (
   return range
 }
 
-const XOneNumber: FC<IProps> = (props) => {
+const XOneNumber: FC<IXOneNumberProps> = (props) => {
   const { value = 0, direction = 'up', ...restProps } = props
   const preValue = usePreviousDistinct(value) || 0
   const values = useMemo(() => getRange(preValue, value, direction), [
@@ -96,7 +48,7 @@ const XOneNumber: FC<IProps> = (props) => {
     reset: true
   })
   return (
-    <XInnerOneNumberAnimated
+    <XOneCharAnimated
       value={index.interpolate((i) => values[Math.round(i)])}
       direction={direction}
       {...restProps}

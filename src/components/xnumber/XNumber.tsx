@@ -2,6 +2,8 @@ import React, { FC, useMemo } from 'react'
 import XOneNumber from './XOneNumber'
 import styled from 'styled-components'
 import { usePreviousDistinct } from 'react-use'
+import { isNumber } from 'lodash'
+import XOneChar from './XOneChar'
 
 export interface IProps {
   value?: number
@@ -26,17 +28,28 @@ const XNumber: FC<IProps> = (props) => {
     .toString()
     .split('')
     .reverse()
-    .map((v, index) => ({ value: Number(v), index }))
+    .map((v, index) => {
+      const type = isNumber(v) ? 'number' : 'char'
+      return { value: v, index, type }
+    })
     .reverse()
   return (
     <Container>
-      {values.map((v) => (
-        <XOneNumber
-          key={v.index}
-          direction={direction}
-          value={v.value as any}
-        />
-      ))}
+      {values.map((v) =>
+        v.type === 'number' ? (
+          <XOneNumber
+            key={v.index}
+            direction={direction}
+            value={Number(v.value) as any}
+          />
+        ) : (
+          <XOneChar
+            key={v.index}
+            direction={direction}
+            value={v.value as any}
+          />
+        )
+      )}
     </Container>
   )
 }
