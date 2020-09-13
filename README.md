@@ -13,14 +13,17 @@ yarn add x-ui
 ## Usage
 
 ```tsx
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
+import { XNumber } from '../src'
+import { useInterval } from 'react-use'
+import { random } from 'lodash'
 
-import { XNumber } from 'x-ui'
-
-const Example: FC = () => {
-  render() {
-    return <XNumber value={2020} />
-  }
+const Random: FC = () => {
+  const [value, setValue] = useState(random(-10000, 10000, true).toFixed(2))
+  useInterval(() => {
+    setValue(random(-10000, 10000, true).toFixed(2))
+  }, 2000)
+  return <XNumber value={value} />
 }
 ```
 
