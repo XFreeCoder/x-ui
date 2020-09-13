@@ -14,7 +14,7 @@ yarn add x-ui
 
 ```tsx
 import React, { FC, useState } from 'react'
-import { XNumber } from '../src'
+import { XNumber } from 'x-ui'
 import { useInterval } from 'react-use'
 import { random } from 'lodash'
 
