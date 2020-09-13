@@ -19,9 +19,13 @@ Default.args = {
 }
 Default.argTypes = {
   value: { control: { type: 'number', step: 0.01 } },
+  width: { control: { type: 'number' } },
+  height: { control: { type: 'number' } },
   color: { control: { type: 'color' } },
   backgroundColor: { control: { type: 'color' } },
-  style: { control: { type: 'object' } }
+  style: { control: { type: 'object' } },
+  fontSize: { control: { type: 'number' } },
+  fontWeight: { control: { type: 'number' } }
 }
 
 export const Random: FC = () => {

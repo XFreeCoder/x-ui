@@ -24,27 +24,42 @@ export interface IXNumberProps {
   value?: number | string
 
   /**
-   * Number color
+   * XNumber width
    */
-  color?: string
+  width?: CSSProperties['width']
 
   /**
-   * Background color
+   * XNumber height
    */
-  backgroundColor?: string
+  height?: CSSProperties['height']
+
+  /**
+   * XNumber className
+   */
+  className?: string
+
+  /**
+   * Numbers color
+   */
+  color?: CSSProperties['color']
+
+  /**
+   * XNumber background color
+   */
+  backgroundColor?: CSSProperties['backgroundColor']
 
   /**
    * Font size
    */
-  fontSize?: number
+  fontSize?: CSSProperties['fontSize']
 
   /**
    * Font weight
    */
-  fontWeight?: number
+  fontWeight?: CSSProperties['fontWeight']
 
   /**
-   * Number style
+   * XNumber style
    */
   style?: CSSProperties
 }
