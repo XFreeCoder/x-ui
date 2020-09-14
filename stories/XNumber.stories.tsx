@@ -38,8 +38,8 @@ export const Random: FC = () => {
   }, 3000)
   return (
     <div>
-      <XNumber width={125} value={firValue} />
-      <XNumber width={125} value={secValue} />
+      <XNumber key='firRandom' value={firValue} width={125} />
+      <XNumber key='secRandom' value={secValue} width={125} />
     </div>
   )
 }
