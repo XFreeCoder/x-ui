@@ -5,7 +5,8 @@ export const XOneCharContainer = styled.span((_props) => ({
 }))
 
 export const StyledXOneChar = styled.span((_props) => ({
-  position: 'absolute'
+  position: 'absolute',
+  willChange: 'transform, opacity'
 }))
 
 export const XNumberContainer = styled.span((_props) => ({
