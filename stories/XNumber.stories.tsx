@@ -16,7 +16,12 @@ const Template: Story<XNumberProps> = (args) => <XNumber {...args} />
 export const Default: Meta<XNumberProps> = Template.bind({})
 Default.args = {
   value: 520,
-  width: 125
+  width: 125,
+  height: 20,
+  color: '#000',
+  backgroundColor: '#fff0',
+  fontSize: 16,
+  fontWeight: 400
 }
 Default.argTypes = {
   value: { control: { type: 'number', step: 0.01 } },
