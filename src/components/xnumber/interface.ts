@@ -7,8 +7,8 @@ export type DirectionType = 'up' | 'down'
 export interface IXOneNumberProps {
   value?: OneNumType
   direction?: DirectionType
-  offsetFrom?: number
-  offsetTo?: number
+  offsetFromRatio?: number
+  offsetToRatio?: number
 }
 
 export interface IXOneCharProps extends Omit<IXOneNumberProps, 'value'> {

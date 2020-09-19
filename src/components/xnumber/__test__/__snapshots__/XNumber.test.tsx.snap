@@ -5,83 +5,85 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="sc-dlnjPT hcfENY"
+      <span
+        class="sc-dlnjPT jfetdE"
+        style="width: 125px; height: 20px; color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); font-size: 16px; font-weight: 400;"
       >
-        <div
+        <span
           class="sc-bdnylx ffZFiP"
           style="height: 0px; width: 0px;"
         >
-          <div
+          <span
             class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,10px,0);"
-          >
-            1
-          </div>
-        </div>
-        <div
-          class="sc-bdnylx ffZFiP"
-          style="height: 0px; width: 0px;"
-        >
-          <div
-            class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,10px,0);"
-          >
-            1
-          </div>
-        </div>
-        <div
-          class="sc-bdnylx ffZFiP"
-          style="height: 0px; width: 0px;"
-        >
-          <div
-            class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,10px,0);"
+            style="opacity: 0; transform: translate3d(0,0px,0);"
           >
             0
-          </div>
-        </div>
-      </div>
+          </span>
+        </span>
+        <span
+          class="sc-bdnylx ffZFiP"
+          style="height: 0px; width: 0px;"
+        >
+          <span
+            class="sc-gtssRu huSdcX x-one-number"
+            style="opacity: 0; transform: translate3d(0,0px,0);"
+          >
+            1
+          </span>
+        </span>
+        <span
+          class="sc-bdnylx ffZFiP"
+          style="height: 0px; width: 0px;"
+        >
+          <span
+            class="sc-gtssRu huSdcX x-one-number"
+            style="opacity: 0; transform: translate3d(0,0px,0);"
+          >
+            1
+          </span>
+        </span>
+      </span>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="sc-dlnjPT hcfENY"
+    <span
+      class="sc-dlnjPT jfetdE"
+      style="width: 125px; height: 20px; color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); font-size: 16px; font-weight: 400;"
     >
-      <div
+      <span
         class="sc-bdnylx ffZFiP"
         style="height: 0px; width: 0px;"
       >
-        <div
+        <span
           class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,10px,0);"
-        >
-          1
-        </div>
-      </div>
-      <div
-        class="sc-bdnylx ffZFiP"
-        style="height: 0px; width: 0px;"
-      >
-        <div
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,10px,0);"
-        >
-          1
-        </div>
-      </div>
-      <div
-        class="sc-bdnylx ffZFiP"
-        style="height: 0px; width: 0px;"
-      >
-        <div
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,10px,0);"
+          style="opacity: 0; transform: translate3d(0,0px,0);"
         >
           0
-        </div>
-      </div>
-    </div>
+        </span>
+      </span>
+      <span
+        class="sc-bdnylx ffZFiP"
+        style="height: 0px; width: 0px;"
+      >
+        <span
+          class="sc-gtssRu huSdcX x-one-number"
+          style="opacity: 0; transform: translate3d(0,0px,0);"
+        >
+          1
+        </span>
+      </span>
+      <span
+        class="sc-bdnylx ffZFiP"
+        style="height: 0px; width: 0px;"
+      >
+        <span
+          class="sc-gtssRu huSdcX x-one-number"
+          style="opacity: 0; transform: translate3d(0,0px,0);"
+        >
+          1
+        </span>
+      </span>
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

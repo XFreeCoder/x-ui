@@ -9,6 +9,11 @@ import { animated, useSpring } from 'react-spring'
 
 const AnimatedXNumberContainer = animated(XNumberContainer)
 
+/**
+ * @description A very simple component used for display a number.
+ *
+ * @param props IXNumberProps
+ */
 const XNumber: FC<IXNumberProps> = (props) => {
   const {
     value = 0,
