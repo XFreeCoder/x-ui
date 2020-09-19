@@ -7,14 +7,21 @@ import { XOneCharContainer, StyledXOneChar } from './Styled'
 const AnimatedXOneChar = animated(StyledXOneChar)
 
 const XOneChar: FC<IXOneCharProps> = (props) => {
-  const { value, direction = 'up', offsetFrom = 10, offsetTo = -5 } = props
+  const {
+    value,
+    direction = 'up',
+    offsetFromRatio = 0.8,
+    offsetToRatio = -0.3
+  } = props
   const [measureRef, { height, width }] = useMeasure<HTMLDivElement>()
   const offset = useMemo(() => {
+    const offsetFrom = height * offsetFromRatio
+    const offsetTo = height * offsetToRatio
     if (direction === 'up') {
       return { offsetFrom, offsetTo }
     }
     return { offsetFrom: -offsetFrom, offsetTo: -offsetTo }
-  }, [direction, offsetTo, offsetFrom])
+  }, [direction, offsetToRatio, offsetFromRatio, height])
   const transitions = useTransition(value, (p) => p, {
     from: {
       opacity: 0,
