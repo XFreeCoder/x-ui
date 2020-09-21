@@ -75,5 +75,12 @@
     "react-spring": "^8.0.27",
     "react-use": "^15.3.4",
     "styled-components": "^5.2.0"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "./src/components/": {
+        "statements": 95
+      }
+    }
   }
 }
