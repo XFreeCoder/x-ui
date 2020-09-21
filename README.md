@@ -2,7 +2,7 @@
 
 > A react components library with the extreme user experience
 
-[![NPM](https://img.shields.io/npm/v/x-ui.svg)](https://www.npmjs.com/package/x-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/XFreeCoder/x-ui.svg)](https://www.npmjs.com/package/x-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![CI](https://github.com/XFreeCoder/x-ui/workflows/CI/badge.svg) ![Deploy](https://github.com/XFreeCoder/x-ui/workflows/Deploy/badge.svg)
 
 ## Install
 

@@ -7,8 +7,8 @@ export type DirectionType = 'up' | 'down'
 export interface IXOneNumberProps {
   value?: OneNumType
   direction?: DirectionType
-  offsetFrom?: number
-  offsetTo?: number
+  offsetFromRatio?: number
+  offsetToRatio?: number
 }
 
 export interface IXOneCharProps extends Omit<IXOneNumberProps, 'value'> {
@@ -25,11 +25,15 @@ export interface IXNumberProps {
 
   /**
    * XNumber width
+   *
+   * @default 125
    */
   width?: CSSProperties['width']
 
   /**
    * XNumber height
+   *
+   * @default 20
    */
   height?: CSSProperties['height']
 
@@ -40,21 +44,29 @@ export interface IXNumberProps {
 
   /**
    * Numbers color
+   *
+   * @default '#000'
    */
   color?: CSSProperties['color']
 
   /**
    * XNumber background color
+   *
+   * @default '#fff0'
    */
   backgroundColor?: CSSProperties['backgroundColor']
 
   /**
    * Font size
+   *
+   * @default 16
    */
   fontSize?: CSSProperties['fontSize']
 
   /**
    * Font weight
+   *
+   * @default 400
    */
   fontWeight?: CSSProperties['fontWeight']
 
