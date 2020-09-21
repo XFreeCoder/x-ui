@@ -28,7 +28,7 @@ jobs:
           CI: true
 
       - name: Deploy
-        run: yarn deploy-storybook
+        run: yarn deploy-storybook -- --ci
         env:
           CI: true
           GH_TOKEN: ${{ secrets.ACTION_TOKEN }}
