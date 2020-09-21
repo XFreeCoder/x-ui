@@ -1,11 +1,13 @@
-name: CI
-on: [push]
+name: Deploy
+on:
+  pull_request:
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Begin CI...
+      - name: Begin Deploy...
         uses: actions/checkout@v2
 
       - name: Use Node 12
@@ -25,12 +27,7 @@ jobs:
         env:
           CI: true
 
-      - name: Test
-        run: yarn test
-        env:
-          CI: true
-
-      - name: Build
-        run: yarn build
+      - name: Deploy
+        run: yarn deploy-storybook
         env:
           CI: true
