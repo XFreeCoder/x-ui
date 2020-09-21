@@ -31,3 +31,4 @@ jobs:
         run: yarn deploy-storybook
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
