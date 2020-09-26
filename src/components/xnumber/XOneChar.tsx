@@ -11,7 +11,8 @@ const XOneChar: FC<IXOneCharProps> = (props) => {
     value,
     direction = 'up',
     offsetFromRatio = 0.8,
-    offsetToRatio = -0.3
+    offsetToRatio = -0.3,
+    animationConfig
   } = props
   const [measureRef, { height, width }] = useMeasure<HTMLDivElement>()
   const offset = useMemo(() => {
@@ -23,6 +24,7 @@ const XOneChar: FC<IXOneCharProps> = (props) => {
     return { offsetFrom: -offsetFrom, offsetTo: -offsetTo }
   }, [direction, offsetToRatio, offsetFromRatio, height])
   const transitions = useTransition(value, (p) => p, {
+    config: animationConfig,
     from: {
       opacity: 0,
       transform: `translate3d(0,${offset.offsetFrom}px,0)`

@@ -9,7 +9,7 @@ import { getRange } from './utils'
 const AnimatedXOneChar = animated(XOneChar)
 
 const XOneNumber: FC<IXOneNumberProps> = (props) => {
-  const { value = 0, direction = 'up', ...restProps } = props
+  const { value = 0, direction = 'up', animationConfig, ...restProps } = props
   const preValue = usePreviousDistinct(value) || 0
   const values = useMemo(() => getRange(preValue, value, direction), [
     value,
@@ -17,6 +17,7 @@ const XOneNumber: FC<IXOneNumberProps> = (props) => {
     direction
   ])
   const { index } = useSpring({
+    config: animationConfig,
     index: values.length - 1,
     from: { index: 0 },
     reset: true
@@ -25,6 +26,7 @@ const XOneNumber: FC<IXOneNumberProps> = (props) => {
     <AnimatedXOneChar
       value={index.interpolate((i) => values[Math.round(i)])}
       direction={direction}
+      animationConfig={animationConfig}
       {...restProps}
     />
   )

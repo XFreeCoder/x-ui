@@ -6,6 +6,7 @@ import XOneChar from './XOneChar'
 import { XNumberContainer } from './Styled'
 import { IXNumberProps } from './interface'
 import { animated, useSpring } from 'react-spring'
+import { animationConfig as config } from '../../constants'
 
 const AnimatedXNumberContainer = animated(XNumberContainer)
 
@@ -23,6 +24,7 @@ const XNumber: FC<IXNumberProps> = (props) => {
     backgroundColor = '#fff0',
     fontSize = 16,
     fontWeight = 400,
+    animationConfig = config.default,
     ...restProps
   } = props
   const preValue = usePreviousDistinct(value) || 0
@@ -32,7 +34,8 @@ const XNumber: FC<IXNumberProps> = (props) => {
     color,
     backgroundColor,
     fontSize,
-    fontWeight
+    fontWeight,
+    config: animationConfig
   }))
   useEffect(() => {
     set({
@@ -41,7 +44,8 @@ const XNumber: FC<IXNumberProps> = (props) => {
       color,
       backgroundColor,
       fontSize,
-      fontWeight
+      fontWeight,
+      config: animationConfig
     })
   }, [width, height, color, backgroundColor, fontSize, fontWeight])
   const direction = useMemo(
@@ -64,9 +68,15 @@ const XNumber: FC<IXNumberProps> = (props) => {
             key={index}
             direction={direction}
             value={Number(v.value) as any}
+            animationConfig={animationConfig}
           />
         ) : (
-          <XOneChar key={index} direction={direction} value={v.value as any} />
+          <XOneChar
+            key={index}
+            direction={direction}
+            value={v.value as any}
+            animationConfig={animationConfig}
+          />
         )
       )}
     </AnimatedXNumberContainer>
