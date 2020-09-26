@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { XNumber } from '../src'
+import { XNumber, animationConfig as config } from '../src'
 import { useInterval } from 'react-use'
 import { random } from 'lodash'
 
@@ -16,6 +16,7 @@ const Template: Story<XNumberProps> = (args) => <XNumber {...args} />
 export const Default: Meta<XNumberProps> = Template.bind({})
 Default.args = {
   value: 520,
+  animationConfig: config.default,
   width: 125,
   height: 20,
   color: '#000',
@@ -25,6 +26,9 @@ Default.args = {
 }
 Default.argTypes = {
   value: { control: { type: 'number', step: 0.01 } },
+  animationConfig: {
+    control: { type: 'object' }
+  },
   width: { control: { type: 'number' } },
   height: { control: { type: 'number' } },
   color: { control: { type: 'color' } },
