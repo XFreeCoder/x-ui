@@ -1,21 +1,10 @@
 import { CSSProperties } from 'react'
 import { SpringConfig } from 'react-spring'
 
-export type OneNumType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-export type NumSymbolType = '-' | '.'
-export type DirectionType = 'up' | 'down'
-
 export interface IXOneNumberProps {
-  value?: OneNumType
-  direction?: DirectionType
-  offsetFromRatio?: number
-  offsetToRatio?: number
-  animationConfig?: SpringConfig
-}
-
-export interface IXOneCharProps extends Omit<IXOneNumberProps, 'value'> {
-  value: OneNumType | NumSymbolType
-  animationConfig?: SpringConfig
+  value: number
+  radius?: number
+  animationConfig: SpringConfig
 }
 
 export interface IXNumberProps {
@@ -32,6 +21,13 @@ export interface IXNumberProps {
    * @default animationConfig.default
    */
   animationConfig?: SpringConfig
+
+  /**
+   * Number radius
+   *
+   * @default undefined
+   */
+  radius?: number
 
   /**
    * XNumber width

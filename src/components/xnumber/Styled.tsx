@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
-export const XOneCharContainer = styled.span((_props) => ({
+export const XOneNumberContainer = styled.span((_props) => ({
+  display: 'inline-flex',
+  alignItems: 'center',
   overflowY: 'hidden'
 }))
 
-export const StyledXOneChar = styled.span((_props) => ({
+export const StyledXOneNumber = styled.span((_props) => ({
   position: 'absolute',
   willChange: 'transform, opacity'
 }))
