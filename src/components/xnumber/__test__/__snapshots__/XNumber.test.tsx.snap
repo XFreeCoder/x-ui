@@ -10,37 +10,217 @@ Object {
         style="width: 125px; height: 20px; color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); font-size: 16px; font-weight: 400;"
       >
         <span
-          class="sc-bdnylx ffZFiP"
+          class="sc-bdnylx dQYGTz"
           style="height: 0px; width: 0px;"
         >
           <span
-            class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,0px,0);"
+            style="visibility: hidden;"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 1; transform: translateY(0px);"
           >
             0
           </span>
-        </span>
-        <span
-          class="sc-bdnylx ffZFiP"
-          style="height: 0px; width: 0px;"
-        >
           <span
-            class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,0px,0);"
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
           >
             1
           </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            2
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            3
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            4
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            6
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            7
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            8
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            9
+          </span>
         </span>
         <span
-          class="sc-bdnylx ffZFiP"
+          class="sc-bdnylx dQYGTz"
           style="height: 0px; width: 0px;"
         >
           <span
-            class="sc-gtssRu huSdcX x-one-number"
-            style="opacity: 0; transform: translate3d(0,0px,0);"
+            style="visibility: hidden;"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 1; transform: translateY(0px);"
+          >
+            0
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
           >
             1
           </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            2
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            3
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            4
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            6
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            7
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            8
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            9
+          </span>
+        </span>
+        <span
+          class="sc-bdnylx dQYGTz"
+          style="height: 0px; width: 0px;"
+        >
+          <span
+            style="visibility: hidden;"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 1; transform: translateY(0px);"
+          >
+            0
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            1
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            2
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            3
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            4
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            5
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            6
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            7
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            8
+          </span>
+          <span
+            class="sc-gtssRu huSdcX"
+            style="opacity: 0; transform: translateY(0px);"
+          >
+            9
+          </span>
+        </span>
+        <span>
+          -
         </span>
       </span>
     </div>
@@ -51,37 +231,217 @@ Object {
       style="width: 125px; height: 20px; color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); font-size: 16px; font-weight: 400;"
     >
       <span
-        class="sc-bdnylx ffZFiP"
+        class="sc-bdnylx dQYGTz"
         style="height: 0px; width: 0px;"
       >
         <span
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,0px,0);"
+          style="visibility: hidden;"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 1; transform: translateY(0px);"
         >
           0
         </span>
-      </span>
-      <span
-        class="sc-bdnylx ffZFiP"
-        style="height: 0px; width: 0px;"
-      >
         <span
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,0px,0);"
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
         >
           1
         </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          2
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          3
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          4
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          6
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          7
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          8
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          9
+        </span>
       </span>
       <span
-        class="sc-bdnylx ffZFiP"
+        class="sc-bdnylx dQYGTz"
         style="height: 0px; width: 0px;"
       >
         <span
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,0px,0);"
+          style="visibility: hidden;"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 1; transform: translateY(0px);"
+        >
+          0
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
         >
           1
         </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          2
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          3
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          4
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          6
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          7
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          8
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          9
+        </span>
+      </span>
+      <span
+        class="sc-bdnylx dQYGTz"
+        style="height: 0px; width: 0px;"
+      >
+        <span
+          style="visibility: hidden;"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 1; transform: translateY(0px);"
+        >
+          0
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          1
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          2
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          3
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          4
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          6
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          7
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          8
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          9
+        </span>
+      </span>
+      <span>
+        -
       </span>
     </span>
   </div>,

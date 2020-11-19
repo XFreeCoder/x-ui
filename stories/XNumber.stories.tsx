@@ -25,7 +25,7 @@ Default.args = {
   fontWeight: 400
 }
 Default.argTypes = {
-  value: { control: { type: 'number', step: 0.01 } },
+  value: { control: { type: 'number' } },
   animationConfig: {
     control: { type: 'object' }
   },
@@ -39,16 +39,13 @@ Default.argTypes = {
 }
 
 export const Random: FC = () => {
-  const [firValue, setFirValue] = useState(random(-1000, 1000, true).toFixed(2))
-  const [secValue, setSecValue] = useState(random(-1000, 1000, true).toFixed(2))
+  const [value, setValue] = useState(0)
   useInterval(() => {
-    setFirValue(random(-1000, 1000, true).toFixed(2))
-    setSecValue(random(-1000, 1000, true).toFixed(2))
+    setValue((prev) => prev + random(-1000000, 1000000, true))
   }, 3000)
   return (
     <div>
-      <XNumber key='firRandom' value={firValue} width={125} />
-      <XNumber key='secRandom' value={secValue} width={125} />
+      <XNumber value={value.toFixed(2)} width={125} />
     </div>
   )
 }
