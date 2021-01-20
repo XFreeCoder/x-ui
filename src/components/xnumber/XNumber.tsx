@@ -1,11 +1,10 @@
-import React, { FC, useEffect, useMemo } from 'react'
-import XOneNumber from './XOneNumber'
-import { usePreviousDistinct } from 'react-use'
-import { isNaN } from 'lodash'
-import XOneChar from './XOneChar'
+import React, { FC, useMemo } from 'react'
 import { XNumberContainer } from './Styled'
 import { IXNumberProps } from './interface'
 import { animated, useSpring } from 'react-spring'
+import { animationConfig as config } from '../../constants'
+import XOneNumber from './XOneNumber'
+import { isNaN, isNumber } from 'lodash'
 
 const AnimatedXNumberContainer = animated(XNumberContainer)
 
@@ -17,58 +16,75 @@ const AnimatedXNumberContainer = animated(XNumberContainer)
 const XNumber: FC<IXNumberProps> = (props) => {
   const {
     value = 0,
+    radius,
     width = 125,
     height = 20,
     color = '#000',
     backgroundColor = '#fff0',
     fontSize = 16,
     fontWeight = 400,
+    animationConfig = config.default,
     ...restProps
   } = props
-  const preValue = usePreviousDistinct(value) || 0
-  const [animatedStyle, set] = useSpring(() => ({
+
+  const animatedProps = useSpring({
     width,
     height,
     color,
     backgroundColor,
     fontSize,
-    fontWeight
-  }))
-  useEffect(() => {
-    set({
-      width,
-      height,
-      color,
-      backgroundColor,
-      fontSize,
-      fontWeight
-    })
-  }, [width, height, color, backgroundColor, fontSize, fontWeight])
-  const direction = useMemo(
-    () => (Number(value) - Number(preValue) >= 0 ? 'up' : 'down'),
-    [value, preValue]
-  )
-  const values = value
-    .toString()
-    .split('')
-    .reverse()
-    .map((v) => {
-      const type = isNaN(Number(v)) ? 'char' : 'number'
-      return { value: v, type }
-    })
+    fontWeight,
+    config: animationConfig
+  })
+
+  const {
+    width: animatedWidth,
+    height: animatedHeight,
+    color: animatedColor,
+    backgroundColor: animatedBackgroundColor,
+    fontSize: animatedFontSize,
+    fontWeight: animatedFontWeight
+  } = useMemo(() => animatedProps, [animated])
+
+  const elements = useMemo(() => {
+    const sign = Math.sign(Number(value))
+    return value
+      .toString()
+      .split('')
+      .map((ele) => {
+        if (isNaN(Number(ele))) {
+          return ele
+        }
+        return sign * Number.parseInt(ele)
+      })
+      .reverse()
+  }, [value])
+
   return (
-    <AnimatedXNumberContainer style={animatedStyle} {...restProps}>
-      {values.map((v, index) =>
-        v.type === 'number' ? (
+    <AnimatedXNumberContainer
+      style={{
+        width: animatedWidth,
+        height: animatedHeight,
+        color: animatedColor,
+        backgroundColor: animatedBackgroundColor,
+        fontSize: animatedFontSize,
+        fontWeight: animatedFontWeight
+      }}
+      {...restProps}
+    >
+      {elements.map((ele, index) => {
+        if (!isNumber(ele)) {
+          return <span key={index}>{ele}</span>
+        }
+        return (
           <XOneNumber
             key={index}
-            direction={direction}
-            value={Number(v.value) as any}
+            value={ele}
+            radius={radius}
+            animationConfig={animationConfig}
           />
-        ) : (
-          <XOneChar key={index} direction={direction} value={v.value as any} />
         )
-      )}
+      })}
     </AnimatedXNumberContainer>
   )
 }

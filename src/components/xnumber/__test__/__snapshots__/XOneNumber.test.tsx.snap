@@ -6,40 +6,146 @@ Object {
   "baseElement": <body>
     <div>
       <span
-        class="sc-bdnylx ffZFiP"
+        class="sc-bdnylx dQYGTz"
         style="height: 0px; width: 0px;"
       >
         <span
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,0px,0);"
+          style="visibility: hidden;"
         >
-          9
+          5
         </span>
         <span
-          class="sc-gtssRu huSdcX x-one-number"
-          style="opacity: 0; transform: translate3d(0,0px,0);"
+          class="sc-gtssRu huSdcX"
+          style="opacity: 1; transform: translateY(0px);"
+        >
+          0
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          1
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          2
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          3
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          4
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          5
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
         >
           6
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          7
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          8
+        </span>
+        <span
+          class="sc-gtssRu huSdcX"
+          style="opacity: 0; transform: translateY(0px);"
+        >
+          9
         </span>
       </span>
     </div>
   </body>,
   "container": <div>
     <span
-      class="sc-bdnylx ffZFiP"
+      class="sc-bdnylx dQYGTz"
       style="height: 0px; width: 0px;"
     >
       <span
-        class="sc-gtssRu huSdcX x-one-number"
-        style="opacity: 0; transform: translate3d(0,0px,0);"
+        style="visibility: hidden;"
       >
-        9
+        5
       </span>
       <span
-        class="sc-gtssRu huSdcX x-one-number"
-        style="opacity: 0; transform: translate3d(0,0px,0);"
+        class="sc-gtssRu huSdcX"
+        style="opacity: 1; transform: translateY(0px);"
+      >
+        0
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        1
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        2
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        3
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        4
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        5
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
       >
         6
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        7
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        8
+      </span>
+      <span
+        class="sc-gtssRu huSdcX"
+        style="opacity: 0; transform: translateY(0px);"
+      >
+        9
       </span>
     </span>
   </div>,

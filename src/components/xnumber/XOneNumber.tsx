@@ -1,38 +1,53 @@
 import React, { FC, useMemo } from 'react'
 import { animated, useSpring } from 'react-spring'
-import { usePreviousDistinct } from 'react-use'
-import { isEqual } from 'lodash'
+import { useMeasure } from 'react-use'
 import { IXOneNumberProps } from './interface'
-import XOneChar from './XOneChar'
-import { getRange } from './utils'
+import { XOneNumberContainer, StyledXOneNumber } from './Styled'
+import { calcPositionAndOpacity } from './utils'
 
-const AnimatedXOneChar = animated(XOneChar)
+const InnerXOneNumber: FC<Omit<IXOneNumberProps, 'animationConfig'>> = (
+  props
+) => {
+  const { value, radius } = props
+  const [measureRef, { height, width }] = useMeasure<HTMLSpanElement>()
+  const styles = calcPositionAndOpacity(value)
+  const fixedRadius = useMemo(() => radius || height * 0.8, [radius, height])
 
-const XOneNumber: FC<IXOneNumberProps> = (props) => {
-  const { value = 0, direction = 'up', ...restProps } = props
-  const preValue = usePreviousDistinct(value) || 0
-  const values = useMemo(() => getRange(preValue, value, direction), [
-    value,
-    preValue,
-    direction
-  ])
-  const { index } = useSpring({
-    index: values.length - 1,
-    from: { index: 0 },
-    reset: true
-  })
   return (
-    <AnimatedXOneChar
-      value={index.interpolate((i) => values[Math.round(i)])}
-      direction={direction}
-      {...restProps}
-    />
+    <XOneNumberContainer style={{ height, width }}>
+      <span ref={measureRef} style={{ visibility: 'hidden' }}>
+        5
+      </span>
+      {styles.map((style, index) => {
+        const { y, opacity } = style
+        return (
+          <StyledXOneNumber
+            style={{
+              opacity: opacity,
+              transform: `translateY(${-y * fixedRadius}px)`
+            }}
+            key={index}
+          >
+            {index}
+          </StyledXOneNumber>
+        )
+      })}
+    </XOneNumberContainer>
   )
 }
 
-export default React.memo(XOneNumber, (preProps, nextProps) => {
-  const { direction: preDirection, ...restPreProps } = preProps
-  const { direction: nextDirection, ...restNextProps } = nextProps
-  // only direction change, dot re-render
-  return isEqual(restPreProps, restNextProps)
-})
+const AnimatedXOneNumber = animated(InnerXOneNumber)
+
+const XOneNumber: FC<IXOneNumberProps> = (props) => {
+  const { value, radius, animationConfig } = props
+
+  const spring = useSpring({
+    value,
+    config: animationConfig,
+    from: { value: 0 }
+  })
+
+  return <AnimatedXOneNumber value={spring.value} radius={radius} />
+}
+
+export default React.memo(XOneNumber)
