@@ -1,10 +1,12 @@
 import React, { FC, useState } from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { XNumber, animationConfig as config } from '../src'
+import {
+  XNumber,
+  IXNumberProps as XNumberProps,
+  animationConfig as config
+} from '../dist'
 import { useInterval } from 'react-use'
 import { random } from 'lodash'
-
-type XNumberProps = React.ComponentProps<typeof XNumber>
 
 export default {
   title: 'Number/XNumber',
