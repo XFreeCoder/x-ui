@@ -1,1 +1,1 @@
-export { XNumber } from './xnumber'
+export { XNumber } from './x-number'
