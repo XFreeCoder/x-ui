@@ -6,3 +6,5 @@ node_modules
 build
 dist
 .idea/
+package-lock.json
+yarn.lock
